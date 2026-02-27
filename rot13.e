@@ -1,4 +1,4 @@
-rot13_start:
+rot13_start
     cp rot13_temp rot13_char
 
     cpdata rot13_cmp 97
@@ -26,6 +26,6 @@ rot13_sub13:
     cp rot13_char rot13_temp
     ret
 
-rot13_char: 0
-rot13_temp: 0
-rot13_cmp: 0
+rot13_char 0
+rot13_temp 0
+rot13_cmp 0
