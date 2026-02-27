@@ -1,22 +1,32 @@
-cpdata  r2 0          // r2 = index = 0
+index: 0
+one:   1
+zero:  0
+
+main_start:
+    cpdata index 0
 
 loop:
-    cpfa   r1 input_array r2   // r1 = input_array[r2]
-    be     r1 zero end         // if r1 == 0, stop
+    ; load input_array[index] into rot13_char
+    cpfa rot13_char input_array index
 
-    cp     rot13_char r1       // pass char to function
-    call   rot13_start         // call ROT13
+    ; if rot13_char == 0 → end
+    be end rot13_char zero
 
-    cp     r1 rot13_char       // get result back
-    cpta   output_array r2 r1  // store into output_array[r2]
+    ; call ROT13
+    call rot13_start
 
-    cpdata r3 1                // r3 = 1
-    add    r2 r2 r3            // r2 = r2 + 1
+    ; store result into output_array[index]
+    cpta output_array index rot13_char
 
-    ba     loop                // repeat
+    ; index = index + 1
+    add index index one
+
+    ; repeat
+    be loop zero zero
 
 end:
     halt
+
 
 input_array:
     'y'
