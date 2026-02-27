@@ -27,5 +27,5 @@ nochange:
     cp rot13_char r1
     ret
 
-rot13_char: 0
+rot13_char 0
 
