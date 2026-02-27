@@ -32,7 +32,4 @@ output_array:
     0
     0
     0
-rot13_char    0            
-rot13_num110  110   
-rot13_num13   13
 #include rot13.e
