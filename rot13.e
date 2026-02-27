@@ -13,7 +13,7 @@ rot13_start:
 
     cpdata 2 123    ; //rot13_cmp123
     blt 1 2 rot13_sub13
-    
+
 rot13_nochange:
     cp 0 1          ; //rot13_charrot13_temp
     ret
