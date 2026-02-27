@@ -9,5 +9,5 @@ rot13_end
 	ret rot13_ra
 
 
-rot13_char    0            
+rot13_char  'a'            
 rot13_110  110   
