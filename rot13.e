@@ -10,4 +10,4 @@ rot13_end
 
 
 rot13_char    0            
-rot13_num110  110   
+rot13_110  110   
