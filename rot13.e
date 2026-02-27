@@ -8,7 +8,7 @@ rot13_start
     cpdata r2 97
     blt nochange r1 r2
     cpdata r2 109
-    blt check_lower r2 r1 
+    blt check_lower r2 r1
     cpdata r3 13
     add r1 r1 r3
     cp rot13_char r1
