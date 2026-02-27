@@ -2,7 +2,7 @@ r0  0
 r1  1
 r2 2
 r3 3
-rot13_start:
+rot13_start
     cpfa r1 rot13_char r0
 
     cpdata r2 97
@@ -13,7 +13,7 @@ rot13_start:
     add r1 r1 r3
     cp rot13_char r1
     ret
-check_lower:
+check_lower
     cpdata r2 110
     blt r1 r2 nochange
     cpdata r2 122
@@ -23,7 +23,7 @@ check_lower:
     sub r1 r1 r3
     cp rot13_char r1
     ret
-nochange:
+nochange
     cp rot13_char r1
     ret
 
