@@ -1,28 +1,19 @@
-index: 0
-one:   1
-zero:  0
+index       0
+one         1
+zero        0
 
 main_start:
-    cpdata index 0
-
+    cp      index       zero
 loop:
-    ; load input_array[index] into rot13_char
-    cpfa rot13_char input_array index
+    cpfa    rot13_char  input_array index
+    be      end         rot13_char  zero
 
-    ; if rot13_char == 0 → end
-    be end rot13_char zero
+    call    rot13_start rot13_ra
 
-    ; call ROT13
-    call rot13_start
+    cpta    output_array index rot13_char
 
-    ; store result into output_array[index]
-    cpta output_array index rot13_char
-
-    ; index = index + 1
-    add index index one
-
-    ; repeat
-    be loop zero zero
+    add     index       index       one
+    be      loop        zero        zero
 
 end:
     halt
