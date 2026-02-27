@@ -2,7 +2,7 @@ rot13_start:
     cpfa r1 rot13_char r0
 
     cpdata r2 97
-    blt r1 r2 check_upper
+    blt r1 r2 nochange
     cpdata r2 109
     bgt r1 r2 check_lower
     cpdata r3 13
