@@ -3,7 +3,7 @@ rot13_temp: 0      ; //address1
 rot13_cmp: 0       ; //address2
 
 rot13_start:
-    cp 1 0          ; //rot13_temp = rot13_char
+    cp 1 0          ; //rot13_temprot13_char
 
     cpdata 2 97     ; //rot13_cmp97
     blt 1 2 rot13_nochange
