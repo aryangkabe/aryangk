@@ -4,7 +4,7 @@
 
 rot13_start:
 
-    // Load the character into r1
+    // Load the character into
     cpfa   r1 rot13_char r0
 
     // lowercase a-m (97-109)
