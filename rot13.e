@@ -12,7 +12,7 @@ rot13_start
     cpdata r3 13
     add r1 r1 r3
     cp rot13_char r1
-    ret
+    halt
 check_lower
     cpdata r2 110
     blt r1 r2 nochange
@@ -22,10 +22,10 @@ check_lower
     cpdata r3 13
     sub r1 r1 r3
     cp rot13_char r1
-    ret
+    halt
 nochange
     cp rot13_char r1
-    ret
+    halt
 
 rot13_char 0
 
