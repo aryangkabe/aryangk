@@ -1,7 +1,7 @@
-r0 = 0
-r1 = 1
-r2 = 2
-r3 = 3
+r0  0
+r1  1
+r2 2
+r3 3
 rot13_start:
     cpfa r1 rot13_char r0
 
