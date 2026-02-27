@@ -19,7 +19,7 @@ check_lower:
     sub r1 r1 r3
     cp rot13_char r1
     ret
-nochange: 
+nochange:
     cp rot13_char r1
     ret
 
