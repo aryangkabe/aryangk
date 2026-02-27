@@ -11,7 +11,7 @@ rot13_start:
     ret
 check_lower:
     cpdata r2 110
-    blt r1 r2 no change
+    blt r1 r2 nochange
     cpdata r2 122
     bgt r1 r2 nochange
 
@@ -19,7 +19,7 @@ check_lower:
     sub r1 r1 r3
     cp rot13_char r1
     ret
-no change: 
+nochange: 
     cp rot13_char r1
     ret
 
