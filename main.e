@@ -13,11 +13,11 @@ read_loop
   blt  read_loop  index  password_len
 
 correct
-  cp  0x880000002  green
+  cp  0x80000002  green
   halt
 
 wrong
-  cp  0x880000002 red
+  cp  0x80000001 red
   halt
 
 password
@@ -47,9 +47,9 @@ one  1
 wait_for_press_start
 press_loop
   call ps2_getkey_start  ps2_ra
-  be press_loop  ps2_pressed  ps2_zer0
-  ret wait_for_press
+  be press_loop  ps2_pressed  ps2_zero
+  ret wait_for_press_ra
 
-wait_for_press  0
+wait_for_press_ra  0
 
 #include ps2.e
