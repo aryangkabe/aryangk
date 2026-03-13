@@ -36,7 +36,7 @@ password_len 10
 
 index  0
 expected  0
-match  0
+match_flag  0
 green  255
 red  131071
 
