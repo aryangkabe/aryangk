@@ -47,7 +47,7 @@ one  1
 wait_for_press_start
 press_loop
   call ps2_getkey_start  ps2_ra
-  be press_loop  ps2_pressed  ps2_zerp
+  be press_loop  ps2_pressed  ps2_zer0
   ret wait_for_press
 
 wait_for_press  0
